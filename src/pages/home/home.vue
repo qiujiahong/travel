@@ -40,6 +40,7 @@ export default {
       if (res.ret && res.data) {
         const data = res.data
         this.city = data.city
+        this.swiperList = data.swiperList
       }
     }
   },
