@@ -2,7 +2,7 @@
 <div>
   <div class="title">热销推荐</div>
   <ul>
-    <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+    <li class="item border-bottom" v-for="item of list" :key="item.id">
         <img class="item-img" :src="item.imgUrl" alt="">
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
@@ -17,24 +17,11 @@
 <script>
 export default {
   name: 'HomeRecommend',
+  props: {
+    list: Array
+  },
   data () {
     return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1530410845845&di=3035c7386a9621c22842079b723ce1fd&imgtype=0&src=http%3A%2F%2Fwww.g-photography.net%2Ffile_news%2Fcover%2F13870.jpg',
-        title: '海上世界',
-        desc: '这里是一个好玩的不得了的海上世界'
-      }, {
-        id: '0002',
-        imgUrl: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1530410845845&di=3035c7386a9621c22842079b723ce1fd&imgtype=0&src=http%3A%2F%2Fwww.g-photography.net%2Ffile_news%2Fcover%2F13870.jpg',
-        title: '海上世界',
-        desc: '这里是一个好玩的不得了的海上世界'
-      }, {
-        id: '0003',
-        imgUrl: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1530410845845&di=3035c7386a9621c22842079b723ce1fd&imgtype=0&src=http%3A%2F%2Fwww.g-photography.net%2Ffile_news%2Fcover%2F13870.jpg',
-        title: '海上世界',
-        desc: '这里是一个好玩的不得了的海上世界'
-      }]
     }
   }
 }
