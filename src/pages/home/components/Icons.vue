@@ -16,51 +16,17 @@
 <script>
 export default {
   name: 'HomeIcons',
+  props: {
+    list: Array
+  },
   data () {
     return {
-      iconList: [{
-        id: '0001',
-        imgUrl: 'http://pic.616pic.com/ys_b_img/00/03/79/2x1QdC2ZQj.jpg',
-        desc: '景点门票'
-      }, {
-        id: '0002',
-        imgUrl: 'http://pic.616pic.com/ys_b_img/00/03/62/z632bbpkr7.jpg',
-        desc: '滑雪季'
-      }, {
-        id: '0003',
-        imgUrl: 'http://pic.616pic.com/ys_b_img/00/03/79/2x1QdC2ZQj.jpg',
-        desc: '滑雪季'
-      }, {
-        id: '0004',
-        imgUrl: 'http://pic.616pic.com/ys_b_img/00/03/79/2x1QdC2ZQj.jpg',
-        desc: '滑雪季4'
-      }, {
-        id: '0005',
-        imgUrl: 'http://pic.616pic.com/ys_b_img/00/03/79/2x1QdC2ZQj.jpg',
-        desc: '滑雪季5'
-      }, {
-        id: '0006',
-        imgUrl: 'http://pic.616pic.com/ys_b_img/00/03/79/2x1QdC2ZQj.jpg',
-        desc: '滑雪季6'
-      }, {
-        id: '0007',
-        imgUrl: 'http://pic.616pic.com/ys_b_img/00/03/79/2x1QdC2ZQj.jpg',
-        desc: '滑雪季7'
-      }, {
-        id: '0008',
-        imgUrl: 'http://pic.616pic.com/ys_b_img/00/03/79/2x1QdC2ZQj.jpg',
-        desc: '滑雪季8'
-      }, {
-        id: '0009',
-        imgUrl: 'http://pic.616pic.com/ys_b_img/00/03/79/2x1QdC2ZQj.jpg',
-        desc: '滑雪季9'
-      }]
     }
   },
   computed: {
     pages () {
       const pages = []
-      this.iconList.forEach((item, index) => {
+      this.list.forEach((item, index) => {
         const page = Math.floor(index / 8)
         if (!pages[page]) {
           pages[page] = [ ]
